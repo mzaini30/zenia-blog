@@ -26,6 +26,7 @@
   "homepage": "https://github.com/mzaini30/new#readme",
   "devDependencies": {
     "fast-glob": "^3.2.11",
+    "presite": "^2.1.2",
     "prettier": "^2.7.1",
     "tsx": "^3.5.0"
   }
