@@ -1,0 +1,2 @@
+- [Permulaan](/)
+- [About Me](/about)

@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "release": "bumpp --tag --commit --push"
+    "release": "presite docs && cp .presite/index.html .presite/404.html && tsx script/injectAds.ts && bumpp --tag --commit --push",
+    "prettier": "prettier --write docs/index.html script/injectAds.ts"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run prettier"
   },
   "repository": {
     "type": "git",
@@ -21,6 +25,9 @@
   },
   "homepage": "https://github.com/mzaini30/new#readme",
   "devDependencies": {
-    "bumpp": "^7.1.1"
+    "bumpp": "^7.1.1",
+    "fast-glob": "^3.2.11",
+    "prettier": "^2.7.1",
+    "tsx": "^3.5.0"
   }
 }
