@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "presite docs && cp .presite/index.html .presite/404.html && tsx script/injectAds.ts",
-    "prettier": "prettier --write docs/index.html script/injectAds.ts docs/lib/elemenBermasalah.js"
+    "build": "rm -rf .presite/ && presite docs && cp .presite/index.html .presite/404.html && tsx script/injectAds.ts && tsx script/injectMeta.ts",
+    "prettier": "prettier --write docs/index.html script/*.ts docs/lib/elemenBermasalah.js"
   },
   "simple-git-hooks": {
     "pre-commit": "npm run prettier"
