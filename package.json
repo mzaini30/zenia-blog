@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "release": "presite docs && cp .presite/index.html .presite/404.html && tsx script/injectAds.ts && git add . && git commit -m \"build: generate site\" && bumpp --tag --commit --push",
+    "build": "presite docs && cp .presite/index.html .presite/404.html && tsx script/injectAds.ts",
     "prettier": "prettier --write docs/index.html script/injectAds.ts docs/lib/elemenBermasalah.js"
   },
   "simple-git-hooks": {
@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/mzaini30/new#readme",
   "devDependencies": {
-    "bumpp": "^7.1.1",
     "fast-glob": "^3.2.11",
     "prettier": "^2.7.1",
     "tsx": "^3.5.0"
