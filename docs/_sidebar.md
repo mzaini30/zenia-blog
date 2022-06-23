@@ -1,2 +1,4 @@
 - [Permulaan](/)
 - [About Me](/about)
+- Lainnya
+  - [Privacy Policy](/post/privacy)
