@@ -1,0 +1,3 @@
+# Semua Bisa Dibuat dengan JavaScript
+
+Ada opini yang beredar di kalangan komunitas JavaScript bahwa semuanya bisa dibuat dengan JavaScript. Eh, nggak lama, TypeScript masuk, terus berubah deh opininya menjadi: Semuanya bisa dibuat dengan TypeScript. Hehehehe...
