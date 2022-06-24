@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -rf .presite/ && presite docs && cp .presite/index.html .presite/404.html && tsx script/injectAds.ts && tsx script/injectMeta.ts",
-    "prettier": "prettier --write docs/index.html script/*.ts docs/lib/elemenBermasalah.js docs/lib/giscus.js"
+    "prettier": "prettier --write docs/index.html script/*.ts docs/lib/elemenBermasalah.js docs/lib/giscus.js",
+    "dev": "docsify serve docs"
   },
   "simple-git-hooks": {
     "pre-commit": "npm run prettier"
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/mzaini30/new#readme",
   "devDependencies": {
+    "docsify-cli": "^4.4.4",
     "fast-glob": "^3.2.11",
     "presite": "^2.1.2",
     "prettier": "^2.7.1",
