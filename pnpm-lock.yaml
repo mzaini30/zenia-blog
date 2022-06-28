@@ -4,14 +4,12 @@ specifiers:
   docsify-cli: ^4.4.4
   fast-glob: ^3.2.11
   presite: ^2.1.2
-  prettier: ^2.7.1
   tsx: ^3.5.0
 
 devDependencies:
   docsify-cli: 4.4.4
   fast-glob: 3.2.11
   presite: 2.1.2
-  prettier: 2.7.1
   tsx: 3.5.0
 
 packages:
@@ -1644,12 +1642,6 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: true
-
-  /prettier/2.7.1:
-    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
     dev: true
 
   /prismjs/1.28.0:
