@@ -1,4 +1,0 @@
-Sitemap: https://zenia.my.id/sitemap.xml
-
-User-agent: *
-Disallow:
