@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <script async="async" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2408628281705149"></script>
+    <title>Build Node JS with Github Action</title>
+    <!-- SEO STARTS --><meta name="mobile-web-app-capable" content="yes">
+<meta name="robots" content="follow, index">
+<meta name="apple-mobile-web-app-title" content="SDK">
+
+<meta content="Collection of tech articles" name="description">
+<link rel="canonical" href="https://zenia.my.id/post/build-node-js-dengan-github-action/">
+
+<meta name="og:site_name" property="og:site_name" content="SDK">
+<meta name="og:type" property="og:type" content="article">
+<meta property="og:description" content="Collection of tech articles">
+<meta property="og:title" content="Build Node JS with Github Action">
+<meta property="og:image" content="https://user-images.githubusercontent.com/7939342/200870027-aca3802f-e6e6-40b6-af0c-bc8316cee728.png">
+<meta property="og:url" content="https://zenia.my.id/post/build-node-js-dengan-github-action/">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="zenia2020">
+<meta name="twitter:title" content="Build Node JS with Github Action">
+<meta name="twitter:description" content="Collection of tech articles">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/7939342/200870027-aca3802f-e6e6-40b6-af0c-bc8316cee728.png">
+<!-- /SEO ENDS-->
+    <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/build-node-js-dengan-github-action.a809c5d9.css" /></head>
+  <body>
+    <div class="p-2">
+    <div class="prose mx-auto my-5">
+      <h1>Build Node JS with Github Action</h1>
+      <p>Create a <code>.github/workflows/build.yml</code> file with the following contents:</p>
+<pre class="astro-code" style="background-color:#0d1117;overflow-x:auto"><code><span class="line"><span style="color:#7EE787">name</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">Deploy</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79C0FF">on</span><span style="color:#C9D1D9">:</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#7EE787">push</span><span style="color:#C9D1D9">:</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#7EE787">branches</span><span style="color:#C9D1D9">:</span></span>
+<span class="line"><span style="color:#C9D1D9">      - </span><span style="color:#A5D6FF">master</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#7EE787">jobs</span><span style="color:#C9D1D9">:</span></span>
+<span class="line"><span style="color:#C9D1D9">  </span><span style="color:#7EE787">deploy</span><span style="color:#C9D1D9">:</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#7EE787">runs-on</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">ubuntu-18.04</span></span>
+<span class="line"><span style="color:#C9D1D9">    </span><span style="color:#7EE787">steps</span><span style="color:#C9D1D9">:</span></span>
+<span class="line"><span style="color:#C9D1D9">      - </span><span style="color:#7EE787">uses</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">actions/checkout@v2</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#7EE787">with</span><span style="color:#C9D1D9">:</span></span>
+<span class="line"><span style="color:#C9D1D9">          </span><span style="color:#7EE787">submodules</span><span style="color:#C9D1D9">: </span><span style="color:#79C0FF">true</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">      - </span><span style="color:#7EE787">name</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">Setup Node</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#7EE787">uses</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">actions/setup-node@v1</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#7EE787">with</span><span style="color:#C9D1D9">:</span></span>
+<span class="line"><span style="color:#C9D1D9">          </span><span style="color:#7EE787">node-version</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">&quot;14.x&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">      - </span><span style="color:#7EE787">name</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">Cache dependencies Node</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#7EE787">uses</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">actions/cache@v1</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#7EE787">with</span><span style="color:#C9D1D9">:</span></span>
+<span class="line"><span style="color:#C9D1D9">          </span><span style="color:#7EE787">path</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">~/.npm</span></span>
+<span class="line"><span style="color:#C9D1D9">          </span><span style="color:#7EE787">key</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">${{ runner.os }}-node-${{ hashFiles(&#39;**/pnpm-lock.yaml&#39;) }}</span></span>
+<span class="line"><span style="color:#C9D1D9">          </span><span style="color:#7EE787">restore-keys</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">${{ runner.os }}-node-</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">      - </span><span style="color:#7EE787">name</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">Install</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#7EE787">run</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">npm i</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">      - </span><span style="color:#7EE787">name</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">Build</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#7EE787">run</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">npm run build</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#C9D1D9">      - </span><span style="color:#7EE787">name</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">Deploy</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#7EE787">uses</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">peaceiris/actions-gh-pages@v3</span></span>
+<span class="line"><span style="color:#C9D1D9">        </span><span style="color:#7EE787">with</span><span style="color:#C9D1D9">:</span></span>
+<span class="line"><span style="color:#C9D1D9">          </span><span style="color:#7EE787">github_token</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">${{ secrets.GITHUB_TOKEN }}</span></span>
+<span class="line"><span style="color:#C9D1D9">          </span><span style="color:#7EE787">publish_dir</span><span style="color:#C9D1D9">: </span><span style="color:#A5D6FF">./dist</span></span></code></pre>
+    </div>
+    <div class="grid grid-cols-4 mx-auto max-w-[65ch] <md:grid-cols-2 gap-2">
+      <a href="/post/build-node-js-dengan-github-action" class="rounded-lg shadow border overflow-none">
+            <img src="https://user-images.githubusercontent.com/7939342/200870027-aca3802f-e6e6-40b6-af0c-bc8316cee728.png" alt="" class="w-full">
+            <div class="p-2 text-sm">Build Node JS with Github Action</div>
+          </a><a href="/post/ketika-bingung-ingin-melakukan-apa" class="rounded-lg shadow border overflow-none">
+            <img src="https://user-images.githubusercontent.com/7939342/200870723-73f59828-d04a-488d-b7a1-4fe4e3bb7af9.png" alt="" class="w-full">
+            <div class="p-2 text-sm">When Confused What To Do</div>
+          </a><a href="/post/mengapa-harus-menggunakan-astro" class="rounded-lg shadow border overflow-none">
+            <img src="https://user-images.githubusercontent.com/7939342/200874947-c1453658-dfa0-4fe9-b739-410079cce936.png" alt="" class="w-full">
+            <div class="p-2 text-sm">Why Should You Use Astro?</div>
+          </a>
+    </div>
+  </div>
+  </body></html>
