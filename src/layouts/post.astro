@@ -2,6 +2,7 @@
 import Base from "./base.astro";
 import { default_image } from "../data";
 import { acak } from "kumpulan-tools";
+import Disqus from "../komponen/disqus.astro";
 
 const { frontmatter: f } = Astro.props;
 let posts = await Astro.glob("../pages/post/*.mdx");
@@ -29,5 +30,6 @@ posts = posts.slice(0, 4);
         ))
       }
     </div>
+    <Disqus url={f.url} identifier={f.url.split("/").reverse()[0]} />
   </div>
 </Base>
