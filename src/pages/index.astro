@@ -2,7 +2,10 @@
 import Base from "../layouts/base.astro";
 import { default_image } from "../data";
 
-const posts = await Astro.glob("./post/*.mdx");
+let posts = await Astro.glob("./post/*.mdx");
+posts = posts.sort((a, b) => {
+  return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+});
 ---
 
 <Base>
