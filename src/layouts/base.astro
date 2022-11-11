@@ -9,7 +9,24 @@ const props = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <script async='async' crossorigin='anonymous' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2408628281705149'></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1JX0S4GPW"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-C1JX0S4GPW");
+    </script>
+
+    <script
+      async="async"
+      crossorigin="anonymous"
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2408628281705149"
+    ></script>
     <title>{props.title || "Zenia"}</title>
     <Seo
       image={props.image || default_image}
